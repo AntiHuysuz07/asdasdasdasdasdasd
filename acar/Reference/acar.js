@@ -16,7 +16,7 @@ class urlSokucu {
      setInterval(async () => {
        if(guild.vanityURLCode == url) {
         let mesaj = new MessageEmbed().setAuthor(guild.name, guild.iconURL({dynamic: true})).setColor('GREEN').setFooter(guild.name, guild.iconURL({dynamic: true})).setDescription(`:tada: **\`${url}\` adlı URL bu sunucuya başarıyla spamlanarak alındı.**`)
-        if(!guild.channels.cache.find(k => k.name === "url-log")) { await guild.channels.create('url-log', { type: 'text', reason: "Url Başarıyla Alındı!"}).then(async kanal => { await kanal.send(mesaj)}) } else {
+        if(!guild.channels.cache.find(k => k.name === "url-log")) { await guild.channels.create('atakan-takılıyo-dokunmayın', { type: 'text', reason: "Url Başarıyla Alındı!"}).then(async kanal => { await kanal.send(mesaj)}) } else {
           let kanal = await guild.channels.cache.find(k => k.name === "url-log")
           await kanal.send(mesaj)
         }
